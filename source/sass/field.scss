@@ -1,0 +1,58 @@
+.field,
+.field *,
+.field *::before,
+.field *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.field {
+  width: 50%;
+  //margin-left: 100px;
+  user-select: none;
+  //flex-shrink: 0;
+}
+
+.field + .field {
+  //margin-top: 30px;
+}
+
+.field table {
+  border-collapse: collapse;
+}
+
+.field__cell {
+  min-width: 25px;
+  height: 25px;
+  background-color: #ffeecc;
+  text-align: center;
+  //font-size: 0;
+  transition: all 0.2s;
+  border: solid 1px #9a9a9a;
+}
+
+.field__cell--ship {
+  background-color: #0068d9;
+}
+
+.field__cell--nearby-ship {
+  background-color: rgba(33, 150, 243, 0.28);
+}
+
+.field__cell--hit {
+  background-color: #d95542;
+}
+
+.field__cell--miss {
+  background-color: #d9d9d9;
+}
+
+.field--map-player table {
+  cursor: crosshair;
+}
+
+.field--map-player .field__cell:not(.field__cell--miss):not(.field__cell--hit):hover {
+  background-color: #d9aca7;
+}

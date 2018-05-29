@@ -1,0 +1,33 @@
+html(lang="ru")
+  head
+    title Морской бой
+
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description" content="")
+    - const date = Date.now()
+    link(rel="preload" href="css/style.min.css?v=" + date as="style")
+    link(rel="stylesheet" type="text/css" href="css/style.min.css?v=" + date)
+    link(rel="preload" href="js/field.min.js?v=" + date as="script")
+
+  body.page
+    header.page__header
+      h1.page__title BattleShips
+    main.page__main
+        //h1.game__title Морской бой
+        section.page__player
+          h2.page__title.page__title--secondary Player
+          div.field.field--player
+          div.field.field--map-player
+        section.page__bot
+          h2.page__title.page__title--secondary Bot
+          div.field.field--bot
+          div.field.field--map-bot
+    //footer.page__footer
+
+    script(type="text/javascript" src="js/utils.min.js?v=" + date)
+    script(type="text/javascript" src="js/battleship.min.js?v=" + date)
+    script(type="text/javascript" src="js/game.min.js?v=" + date)
+    script(type="text/javascript" src="js/field.min.js?v=" + date)
+    script(type="text/javascript" src="js/player.min.js?v=" + date)
+    script(type="text/javascript" src="js/bot.min.js?v=" + date)
